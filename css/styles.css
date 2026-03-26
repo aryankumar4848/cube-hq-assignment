@@ -640,23 +640,45 @@ a {
   flex-direction: column;
   gap: 33px;
   width: 626px;
+  height: 505px;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 626px;
 }
 
 .accordion-item {
+  box-sizing: border-box;
+  width: 626px;
+  background: #FFFFFF;
   border: 1px solid #CDCDCD;
   border-radius: 8px;
-  background: #FFFFFF;
-  padding: 24px 32px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion-item.collapsed {
+  height: 72px;
+}
+
+.accordion-item.expanded {
+  height: 167px;
 }
 
 .accordion-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 24px 32px;
+  cursor: pointer;
+  height: 72px;
+  box-sizing: border-box;
 }
 
 .accordion-header h3 {
@@ -664,13 +686,29 @@ a {
   font-weight: 700;
   font-size: 20px;
   color: #032E15;
+  margin: 0;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 0 24px 24px 32px;
+  box-sizing: border-box;
 }
 
 .accordion-content p {
   font-family: 'Inter';
   font-weight: 300;
   font-size: 16px;
+  line-height: 20px;
   color: #666666;
+  margin: 0;
 }
 
 .collection-images {
@@ -682,11 +720,23 @@ a {
   overflow: hidden;
 }
 
-.collection-images img {
-  width: 100%;
-  height: 100%;
+.collection-img-1 {
+  position: absolute;
+  width: 762.51px;
+  height: 1145.99px;
+  left: calc(50% - 762.51px/2 + 0.8px);
+  top: calc(50% - 1145.99px/2 - 47.96px);
   object-fit: cover;
+}
+
+.collection-img-2 {
+  position: absolute;
+  width: 590px;
+  height: 711px;
+  left: calc(50% - 590px/2 + 0.5px);
+  top: calc(50% - 711px/2 - 0.5px);
   border-radius: 30px;
+  object-fit: cover;
 }
 
 /* =========================================
