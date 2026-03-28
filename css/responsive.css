@@ -1,1 +1,54 @@
 /* Responsive Styles */
+/* Responsive adjustments (desktop-first base styles live in styles.css) */
+
+@media (max-width: 1200px) {
+  .product-layout {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .metrics-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-main {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav-links-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+  }
+
+  .collection-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .hero-h1 {
+    font-size: 42px;
+  }
+
+  .stat-number {
+    font-size: 52px;
+  }
+
+  .comparison-table {
+    height: auto;
+  }
+
+  .footer {
+    padding: 48px 16px;
+  }
+}
